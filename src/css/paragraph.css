@@ -1,0 +1,15 @@
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+li p {
+    display: flex;
+    border: red solid 1px;
+    flex-direction: column;
+    margin: 0;
+}

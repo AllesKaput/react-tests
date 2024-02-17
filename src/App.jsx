@@ -1,21 +1,31 @@
 import "./App.css";
 import Header from "./components/header.jsx";
-
-const user = {
-    firstName: "Иван",
-    lastName: "Иванов",
-};
-
-function formateUser(user) {
-    return user.firstName + " " + user.lastName;
-}
+import Paragraph from "./components/paragraph.jsx";
+import { paragraphs } from "./mainBlockData.js";
 
 function App() {
     return (
         <div>
             <Header />
             <main>
-                <div>Hello {formateUser(user)}</div>
+                <section>
+                    <h3>Dubstep</h3>
+
+                    <ul>
+                        <Paragraph
+                            title={paragraphs[0].title}
+                            description={paragraphs[0].description}
+                        />
+                        <Paragraph
+                            title={paragraphs[1].title}
+                            description={paragraphs[1].description}
+                        />
+                        <Paragraph
+                            title={paragraphs[2].title}
+                            description={paragraphs[2].description}
+                        />
+                    </ul>
+                </section>
             </main>
         </div>
     );
