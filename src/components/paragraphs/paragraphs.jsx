@@ -1,9 +1,9 @@
-import "../css/paragraph.css";
+import "./paragraph.css";
 
-export default function Paragraphs(props) {
-    return props.props.map((element, index) => {
+export default function Paragraphs({ props }) {
+    return props.map((element, index) => {
         return (
-            <li key={index}>
+            <li className="list-element" key={index}>
                 <p>
                     <strong>{element.title}</strong>
                     {element.description}

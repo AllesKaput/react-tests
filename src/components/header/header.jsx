@@ -1,5 +1,4 @@
-import "../css/header.css";
-import logo from "../logo.svg";
+import "./header.css";
 
 const now = new Date();
 

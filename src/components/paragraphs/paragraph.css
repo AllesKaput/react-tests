@@ -7,7 +7,7 @@ li:not(:last-child) {
     margin-bottom: 15px;
 }
 
-li p {
+.list-element p {
     display: flex;
     border: red solid 1px;
     flex-direction: column;
