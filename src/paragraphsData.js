@@ -1,4 +1,4 @@
-export const paragraphs = [
+export const paragraphsData = [
     {
         title: "Lorem0",
         description: `First desc`,
