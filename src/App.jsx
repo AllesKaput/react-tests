@@ -28,6 +28,7 @@ function App() {
             console.log("коллбэк");
             setContent("Click on the button!");
         }, 1000);
+        console.log(timerId);
     }
 
     return (
