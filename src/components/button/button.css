@@ -4,6 +4,7 @@
     border: none;
     background-color: whitesmoke;
     border: 1px transparent solid;
+    transition: all 0.3s ease;
 }
 
 .button:not(:last-child) {
