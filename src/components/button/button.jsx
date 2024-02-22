@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./button.css";
+import classes from "./button.module.css";
 // children - неявно передающийся props, в него попадает содержимое находящееся между тегами (как в обычном html)
 // можно передавать также теги и JS-код
 export default function Button({ children, onClick, isActive }) {
@@ -8,7 +7,7 @@ export default function Button({ children, onClick, isActive }) {
             // начальный класс button + переключатель активного класса isActive
             // isActive переключается на true/false в зависимости от контента
             // внутри тега
-            className={"button" + " " + (isActive ? "active" : "")}
+            className={classes.button + " " + (isActive ? classes.active : "")}
             onClick={() => {
                 // при клике запускается переданная из app.jsx в компонент функция
                 // которая неким образом взаимодействует со страницей

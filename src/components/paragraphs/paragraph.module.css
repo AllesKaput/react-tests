@@ -1,9 +1,4 @@
-ul {
-    display: flex;
-    flex-direction: column;
-}
-
-li:not(:last-child) {
+.list-element:not(:last-child) {
     margin-bottom: 15px;
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./header.css";
+import classes from "./header.module.css";
 
 export default function Header() {
     // now это текущее время и дата
@@ -19,7 +19,7 @@ export default function Header() {
     }, 1000);
 
     return (
-        <header>
+        <header className={classes["header-class"]}>
             {/* <img src={logo} alt="err" /> */}
             <h1>Dubstep</h1>
 
