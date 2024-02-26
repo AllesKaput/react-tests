@@ -26,6 +26,14 @@ export default function TabSwitchSection({ activeTab, switchTabs }) {
             >
                 Drum
             </Button>
+            <Button
+                onClick={() => {
+                    switchTabs("HOC");
+                }}
+                isActive={activeTab === "HOC"}
+            >
+                HOC
+            </Button>
         </div>
     );
 }
