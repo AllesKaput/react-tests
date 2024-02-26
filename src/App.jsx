@@ -16,6 +16,7 @@ function App() {
     function switchTabs(currentTab) {
         setActiveTab(currentTab);
     }
+
     return (
         <>
             <Header />

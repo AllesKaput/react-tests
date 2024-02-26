@@ -11,8 +11,12 @@
     margin-right: 20px;
 }
 
-.button:hover {
+.button:not(:disabled):hover {
     background-color: rgb(236, 236, 236);
+}
+
+.button:disabled {
+    cursor: not-allowed;
 }
 
 .button.active {

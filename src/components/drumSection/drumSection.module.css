@@ -1,0 +1,43 @@
+.input-fields-block {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.input-fields-block__label {
+    margin: 10px 0px 10px 0px;
+}
+
+.input-fields-block__label:first-child {
+    margin-top: 0;
+}
+
+.input-fields-block__input-block,
+.input-fields-block__select-block {
+    box-sizing: border-box;
+    min-width: 200px;
+    outline: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    padding: 0.7rem 1rem;
+    box-shadow: rgb(104, 104, 104) 0 0 10px;
+}
+
+.input-fields-block__input-block:focus {
+}
+
+.input-fields-block__select-block {
+    margin-bottom: 20px;
+}
+
+.input-fields-block__submit-button {
+    max-width: 50%;
+}
+
+/* поскольку нужно это свойство не везде, а например
+только в форме, то сделал отдельный класс с свойствами здесь */
+.input-fields-block__submit-button:not(:disabled):active {
+    border: 1px solid black;
+}
