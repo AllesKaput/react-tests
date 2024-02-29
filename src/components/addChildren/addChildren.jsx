@@ -1,34 +1,41 @@
+import classes from "./addChildern.module.css";
+import Button from "../button/button.jsx";
+
 import { useState } from "react";
 
 export default function AddChildren() {
-
-    const [childrenCount, setChildrenCount] = useState([]);
+    const [childrenArray, setchildrenArray] = useState([]);
+    const [currentInput, setCurrentInput] = useState("");
 
     function addComponent() {
-        // работает так: при запуске функции массив childrenCount
+        if (!currentInput) return;
+        // работает так: при запуске функции массив childrenArray
         // является пустым, но тут мы добавляем в массив count
-        // все элементы из childrenCount и ещё 1 (childrenCount
+        // все элементы из childrenArray и ещё 1 (childrenArray
         // может быть пустым, и тогда в него просто добавится 1)
         // и так происходит каждый раз при активации, массив
         // увеличивается на 1
-        const count = [...childrenCount, 1];
-        // далее динамически рендереящийся массив childrenCount 
+        const count = [...childrenArray, `${currentInput}`];
+        // далее динамически рендереящийся массив childrenArray
         // становится копией увеличенного ранее массива
-        setChildrenCount(count);
+        setchildrenArray(count);
         // сначала как бы создаётся увеличенная на 1 версия текущего
         // динамического массива, а потом самому динамическому
         // массиву присваивается значение его увеличенной копии
     }
 
     return (
-        <div className="App">
-            <button onClick={addComponent}>Add another dub</button>
+        <div className={classes["add-section"]}>
+            <Button onClick={addComponent}>Add</Button>
+            <input
+                onChange={(e) => setCurrentInput(e.target.value)}
+                type="text"
+                value={currentInput}
+            />
             {
                 // динамически рендереящийся массив просто выводится через map
-                childrenCount.map((el, i) => {
-                    return (
-                        <h4>Dub {i}</h4>
-                    )
+                childrenArray.map((el, i) => {
+                    return <div key={i}>{el}</div>;
                 })
             }
         </div>

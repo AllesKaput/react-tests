@@ -39,7 +39,8 @@ export default function ButtonSection() {
             содержимое находящееся между тегами (как в обычном html)
             можно передавать также теги и JS-код
             */}
-            <div>
+            {/* компонент кнопки получит отступ если у родителя есть этот класс-модификатор */}
+            <div className={"_margin-modifier-for-childrens"}>
                 <Button
                     isActive={contentType === `Button 1 is clicked`}
                     onClick={() => {

@@ -1,4 +1,5 @@
 import classes from "./button.module.css";
+import "./margin-modifier.css";
 // children - неявно передающийся props, в него попадает содержимое находящееся между тегами (как в обычном html)
 // можно передавать также теги и JS-код
 export default function Button({
@@ -10,7 +11,7 @@ export default function Button({
     // если что то повторяющеесе (по типу onClick)
     // передаётся, то оно попадает в props,
     // и здесь соответственно принимается
-    ...props 
+    ...props
 }) {
     return (
         <button

@@ -1,0 +1,57 @@
+.modal-window {
+    max-width: 350px;
+    padding: 20px 25px;
+    border: unset;
+    box-shadow: white 0 0 10px;
+    z-index: 5;
+    position: relative;
+}
+
+.modal-window * {
+    margin: 0;
+}
+
+.modal-window h3 {
+    margin-bottom: 0.3rem;
+}
+
+.modal-window[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.close-button::before,
+.close-button::after {
+    content: "";
+    display: inline-block;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    transition: all ease 0.3s;
+}
+
+.close-button::before {
+    top: 50%;
+    /* изначально крестик немного ниже чем нужно
+    поэтому сначала сдвигаем по диагонали вправо на половину
+    толщины, затем на половину влево, таким образом он становится
+    по центру, а вот почему первое свойство translate
+    принимает проценты как ширину блока, а не свою я не понял */
+    transform: rotate(-45deg) translate(1px, -50%);
+}
+
+.close-button::after {
+    top: 50%;
+    transform: rotate(45deg) translate(-1px, -50%);
+}

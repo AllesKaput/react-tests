@@ -1,7 +1,7 @@
 import classes from "./tabSwitchSection.module.css";
 import Button from "../button/button";
 
-export default function TabSwitchSection({ activeTab, switchTabs }) {
+export default function TabSwitchSection({ activeTab, setActiveTab }) {
     // const [activeTab, setActiveTab] = useState("Main");
 
     // function switchTabs(currentTab) {
@@ -9,10 +9,16 @@ export default function TabSwitchSection({ activeTab, switchTabs }) {
     // }
 
     return (
-        <div className={classes["tab-switch-section"]}>
+        <div
+            className={
+                classes["tab-switch-section"] +
+                " " +
+                "_margin-modifier-for-childrens"
+            }
+        >
             <Button
                 onClick={() => {
-                    switchTabs("Main");
+                    setActiveTab("Main");
                 }}
                 isActive={activeTab === "Main"}
             >
@@ -20,7 +26,7 @@ export default function TabSwitchSection({ activeTab, switchTabs }) {
             </Button>
             <Button
                 onClick={() => {
-                    switchTabs("Drum");
+                    setActiveTab("Drum");
                 }}
                 isActive={activeTab === "Drum"}
             >
@@ -28,11 +34,19 @@ export default function TabSwitchSection({ activeTab, switchTabs }) {
             </Button>
             <Button
                 onClick={() => {
-                    switchTabs("HOC");
+                    setActiveTab("HOC");
                 }}
                 isActive={activeTab === "HOC"}
             >
                 HOC
+            </Button>
+            <Button
+                onClick={() => {
+                    setActiveTab("Effects");
+                }}
+                isActive={activeTab === "Effects"}
+            >
+                EffectSection
             </Button>
         </div>
     );

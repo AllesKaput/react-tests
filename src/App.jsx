@@ -7,6 +7,7 @@ import AddChildren from "./components/addChildren/addChildren.jsx";
 import TabSwitchSection from "./components/tabSwitchSection/tabSwitchSection.jsx";
 import DrumSection from "./components/drumSection/drumSection.jsx";
 import HOC from "./components/HOC/HOC.jsx";
+import EffectSection from "./components/EffectSection/EffectSection.jsx";
 
 // import jsonTestData from "./data/test.json";
 // console.log(jsonTestData);
@@ -14,9 +15,9 @@ import HOC from "./components/HOC/HOC.jsx";
 function App() {
     const [activeTab, setActiveTab] = useState("Main");
 
-    function switchTabs(currentTab) {
-        setActiveTab(currentTab);
-    }
+    // function switchTabs(currentTab) {
+    //     setActiveTab(currentTab);
+    // }
 
     return (
         <>
@@ -24,8 +25,10 @@ function App() {
             <main>
                 <TabSwitchSection
                     activeTab={activeTab}
-                    switchTabs={switchTabs}
+                    setActiveTab={setActiveTab}
                 />
+
+                {/* /////////////////////////////////////// */}
 
                 {activeTab === "Main" && (
                     <>
@@ -44,6 +47,12 @@ function App() {
                 {activeTab === "HOC" && (
                     <>
                         <HOC />
+                    </>
+                )}
+
+                {activeTab === "Effects" && (
+                    <>
+                        <EffectSection />
                     </>
                 )}
             </main>

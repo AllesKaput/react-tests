@@ -1,0 +1,21 @@
+.add-section {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.add-section > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.add-section input {
+    box-sizing: border-box;
+    min-width: 200px;
+    outline: none;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    padding: 0.7rem 1rem;
+    box-shadow: rgb(104, 104, 104) 0 0 10px;
+}
