@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./header.module.css";
 
 export default function Header() {
@@ -12,11 +12,18 @@ export default function Header() {
     // снова запускается новый сетинтервал). Я сделал костыль с удалением старого
     // интервала, но по идее нужно сделать так, чтобы работал всегда один
     // (ПЕРЕДЕЛАТЬ)
-    let timerId2 = setInterval(() => {
-        setNow(new Date());
-        // console.log(timerId2);
-        clearInterval(timerId2);
-    }, 1000);
+    // let timerId2 = setInterval(() => {
+    //     setNow(new Date());
+    //     console.log(timerId2);
+    //     // clearInterval(timerId2);
+    // }, 1000);
+
+    // передалал
+    useEffect(() => {
+        setInterval(() => {
+            setNow(new Date());
+        }, 1000);
+    }, []);
 
     return (
         <header className={classes["header-class"]}>

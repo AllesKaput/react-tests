@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { createPortal } from "react-dom";
 import Button from "../button/button.jsx";
 import Modal from "../Modal/Modal.jsx";
 import classes from "./EffectSection.module.css";
@@ -9,11 +10,12 @@ export default function EffectSection() {
     const [isBackGroundOn, setIsBackGroundOn] = useState(false);
 
     function DarkBackground() {
-        return (
+        return createPortal(
             <div
                 ref={darkBg}
                 className={classes["dark-background"]}
-            ></div>
+            ></div>,
+            document.getElementById("modal")
         );
     }
 
@@ -26,7 +28,7 @@ export default function EffectSection() {
             </Button>
 
             {/* модальное окно и бэкграунд */}
-            {isOpen && <DarkBackground />}
+            {/* {isOpen && <DarkBackground />} */}
             <Modal
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}

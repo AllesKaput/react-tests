@@ -4,7 +4,14 @@
     border: unset;
     box-shadow: white 0 0 10px;
     z-index: 5;
-    position: relative;
+    margin-top: 200px;
+}
+
+@media (max-width: 425px) {
+    .modal-window {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 .modal-window * {
