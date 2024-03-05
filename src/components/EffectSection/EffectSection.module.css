@@ -7,3 +7,13 @@
     height: 100%;
     z-index: 2;
 }
+
+.effects-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+}
+
+.open-modal-button {
+    margin-bottom: 20px;
+}

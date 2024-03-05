@@ -20,9 +20,14 @@ export default function Header() {
 
     // передалал
     useEffect(() => {
-        setInterval(() => {
+        const timerInterval = setInterval(() => {
             setNow(new Date());
         }, 1000);
+
+        // если компонент удалён
+        return () => {
+            clearInterval(timerInterval);
+        };
     }, []);
 
     return (

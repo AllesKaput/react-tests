@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/header/header.jsx";
 import ParagraphsSection from "./components/paragraphsSection/paragraphSection.jsx";
 import ButtonSection from "./components/buttonSection/buttonSection.jsx";
@@ -13,7 +13,7 @@ import EffectSection from "./components/EffectSection/EffectSection.jsx";
 // console.log(jsonTestData);
 
 function App() {
-    const [activeTab, setActiveTab] = useState("Main");
+    const [activeTab, setActiveTab] = useState("Effects");
 
     // function switchTabs(currentTab) {
     //     setActiveTab(currentTab);
@@ -22,6 +22,7 @@ function App() {
     return (
         <>
             <Header />
+
             <main>
                 <TabSwitchSection
                     activeTab={activeTab}
