@@ -17,36 +17,34 @@ export default function TabSwitchSection({ activeTab, setActiveTab }) {
             }
         >
             <Button
-                onClick={() => {
-                    setActiveTab("Main");
-                }}
+                onClick={() => setActiveTab("Main")}
                 isActive={activeTab === "Main"}
             >
                 Main
             </Button>
             <Button
-                onClick={() => {
-                    setActiveTab("Drum");
-                }}
+                onClick={() => setActiveTab("Drum")}
                 isActive={activeTab === "Drum"}
             >
                 Drum
             </Button>
             <Button
-                onClick={() => {
-                    setActiveTab("HOC");
-                }}
+                onClick={() => setActiveTab("HOC")}
                 isActive={activeTab === "HOC"}
             >
                 HOC
             </Button>
             <Button
-                onClick={() => {
-                    setActiveTab("Effects");
-                }}
+                onClick={() => setActiveTab("Effects")}
                 isActive={activeTab === "Effects"}
             >
                 EffectSection
+            </Button>
+            <Button
+                onClick={() => setActiveTab("Counter")}
+                isActive={activeTab === "Counter"}
+            >
+                Counter
             </Button>
         </div>
     );

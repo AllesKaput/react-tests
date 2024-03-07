@@ -8,12 +8,13 @@ import TabSwitchSection from "./components/tabSwitchSection/tabSwitchSection.jsx
 import DrumSection from "./components/drumSection/drumSection.jsx";
 import HOC from "./components/HOC/HOC.jsx";
 import EffectSection from "./components/EffectSection/EffectSection.jsx";
+import Counter from "./components/Counter/Counter.jsx";
 
 // import jsonTestData from "./data/test.json";
 // console.log(jsonTestData);
 
 function App() {
-    const [activeTab, setActiveTab] = useState("Effects");
+    const [activeTab, setActiveTab] = useState("Counter");
 
     // function switchTabs(currentTab) {
     //     setActiveTab(currentTab);
@@ -54,6 +55,12 @@ function App() {
                 {activeTab === "Effects" && (
                     <>
                         <EffectSection />
+                    </>
+                )}
+
+                {activeTab === "Counter" && (
+                    <>
+                        <Counter />
                     </>
                 )}
             </main>
