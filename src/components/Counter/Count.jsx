@@ -1,9 +1,11 @@
+import React from "react";
+
 const countOfRenders = {
     firstCounter: 0,
     secondCounter: 0,
 };
 
-export default function Count({ id, value }) {
+export default React.memo(function Count({ id, value }) {
     console.warn(
         `Count of ${id === 1 ? "first" : "second"} counter render is ${
             id === 1
@@ -13,4 +15,4 @@ export default function Count({ id, value }) {
     );
 
     return <div>{value}</div>;
-}
+});

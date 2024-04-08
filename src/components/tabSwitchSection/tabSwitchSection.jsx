@@ -46,6 +46,14 @@ export default function TabSwitchSection({ activeTab, setActiveTab }) {
             >
                 Counter
             </Button>
+            <Button
+                onClick={() => {
+                    setActiveTab("displayArrayExercise");
+                }}
+                isActive={activeTab === "displayArrayExercise"}
+            >
+                Display Array Test
+            </Button>
         </div>
     );
 }

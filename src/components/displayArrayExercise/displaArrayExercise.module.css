@@ -1,0 +1,14 @@
+.arrayDisplayBlock {
+    margin-top: 25px;
+}
+
+.arrayDisplayBlock > *:not(:last-child) {
+    margin-right: 15px;
+}
+
+.arrayDisplayBlock > input {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px gray;
+    padding: 10px 15px;
+}

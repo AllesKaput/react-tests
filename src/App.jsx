@@ -9,12 +9,13 @@ import DrumSection from "./components/drumSection/drumSection.jsx";
 import HOC from "./components/HOC/HOC.jsx";
 import EffectSection from "./components/EffectSection/EffectSection.jsx";
 import Counter from "./components/Counter/Counter.jsx";
+import DisplayArrayExercise from "./components/displayArrayExercise/displayArrayExercise.tsx";
 
 // import jsonTestData from "./data/test.json";
 // console.log(jsonTestData);
 
 function App() {
-    const [activeTab, setActiveTab] = useState("Counter");
+    const [activeTab, setActiveTab] = useState("displayArrayExercise");
 
     // function switchTabs(currentTab) {
     //     setActiveTab(currentTab);
@@ -62,6 +63,10 @@ function App() {
                     <>
                         <Counter />
                     </>
+                )}
+
+                {activeTab === "displayArrayExercise" && (
+                    <DisplayArrayExercise />
                 )}
             </main>
         </>
