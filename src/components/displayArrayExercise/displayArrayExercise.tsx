@@ -13,6 +13,18 @@ export default function DisplayArrayExercise({}) {
     const input: any = useRef();
 
     function handleAddNewWord(event) {
+        if (arrayToDisplay.includes(input.current.value)) {
+            const indexOfElement: number = arrayToDisplay.indexOf(
+                input.current.value
+            );
+            let newArray: string[] = [...arrayToDisplay];
+            newArray.push(arrayToDisplay[indexOfElement]);
+            newArray = newArray.filter((el, index) => {
+                return index !== indexOfElement;
+            });
+            setArrayToDisplay([...newArray]);
+            return;
+        }
         if (arrayToDisplay.length >= 5) {
             const newArray: string[] = [...arrayToDisplay];
             newArray.shift();
